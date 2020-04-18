@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<div class="container text-center">
+    <div class="shadow p-3 mb-5 bg-white rounded">
+        <h1>Welcome To Password Maker!</h1>
+        <form action="{%  url 'password' %}">
+            <div class="p-3 mb-2 bg-primary text-white">
+                <br>
+                <select name='length'>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14" selected="selected">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                </select> Password Length
+                <input type="checkbox" name="numbers"> Numbers
+                <input type="checkbox", name="special_char"> Special Characters 
+                <input type="checkbox", name="special_case"> Upercase
+                <br>
+            </div>
+            <br>
+            <input type="submit" value="Generate Password" class="btn btn-outline-success">
+        </form>
+    </div>
+    <hr>
+    <a href="{% url 'about' %}", class="btn btn-outline-secondary">About Page</a>
+</div>
