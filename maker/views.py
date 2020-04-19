@@ -11,7 +11,7 @@ def password(request):
     password = ''
     chars = list('abcdefghijklmnopqrstuvwxyz')
     if request.GET.get('special_case'):
-        chars.extend(list('!@#$%&*_-'))
+        chars.extend(list('!@#$%&*_-()+='))
     if request.GET.get('special_case'):
         chars.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
     if request.GET.get('numbers'):
